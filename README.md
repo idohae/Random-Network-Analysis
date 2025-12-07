@@ -45,9 +45,10 @@ Random-Network-Analysis
 > >       git clone https://github.com/idohae/Random-Network-Analysis.git
 > >
 > > 위 명령어를 명령창에 입력하여 무작위 네트워크 분석 패키지를 원하는 환경에 다운 받는다.
-> >
+>
 > > #### 1) 예시 데이터 분석 파일 실행
 > > `Analysis.ipynb` 파일을 실행한다.
+>
 > > #### 2) 패키지 이용하여 원하는 데이터 분석
 > > `random_graph_pkg` 디렉토리를 분석할 데이터 및 분석 코드와 같은 디렉토리 내에 위치시킨다.
 > > ```python
@@ -55,3 +56,4 @@ Random-Network-Analysis
 > > ```
 > > 분석할 소스 코드에 위와 같이 패키지를 import 한 후 패키지 함수들을 사용한다.
 
+> 
