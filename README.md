@@ -63,7 +63,7 @@ Random-Network-Analysis
 > > ```
 > > 분석할 소스 코드에 위와 같이 패키지를 import 한 후 [패키지 함수들을 사용](#Analysis)한다.
 
-> ### [Analysis](#Analysis)
+> ### [Analysis](#2패키지-이용하여-원하는-데이터-분석)
 > `random_graph_pkg`를 이용해 할 수 있는 분석은 다음과 같다.
 >
 > 1. [무작위 그래프 생성](#What-is-it-for)
