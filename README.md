@@ -8,5 +8,24 @@
 > 장해린(Haerin, Jang) <https://github.com/remote0612/random_network_maker>
 
 ---
-## 
+## 1. Random Networks
 > ### What is it for?
+> 원본 네트워크의 특정한 특성들을 유지한 채 무작위 네트워크를 생성하여 원본 네트워크의 고유한 특성을 비교 분석할 수 있다.
+
+> ### 1.1. Erdős–Rényi (ER) model
+> p의 확률로 노드 간 엣지를 연결하여 그래프를 생성하는 모델
+> 
+> 패키지 내에서 default 값은 원본 네트워크의 엣지 밀도를 사용함.
+> 
+> $p = \frac{\<k\>}{(N-1)}$
+
+> ### 1.2. Configuration model
+> 각 노드의 차수(이웃수)를 고정하고 엣지를 무작위 연결하여 그래프를 생성하는 모델
+
+> ### 1.3. Chung-Lu model
+> 노드 $i$와 노드 $j$ 사이의 엣지를 각 노드의 차수에 따른 확률 $p_{ij}$로 연결하여 그래프를 생성하는 모델
+> 
+> $p_{ij} = \frac{k_ik_j}{\sum_i{k_i}}$
+
+
+
