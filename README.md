@@ -72,33 +72,40 @@ Random-Network-Analysis
 > > ```python
 > > random_graph_analysis = RandomGraphAnalysis(original_graph)
 > > 
-> > # G(n,p)의 ER model을 이용한 그래프 생성
+> > # 1. G(n,p)의 ER model을 이용한 그래프 생성
+> > random_graph_analysis.create_ERnp_graph()
+> > # default값 외에 p값을 지정하고 싶은 경우
+> > random_graph_analysis.p = 0.3
 > > random_graph_analysis.create_ERnp_graph()
 > > 
-> > # Configuration model을 이용한 그래프 생성
+> > # 2. Configuration model을 이용한 그래프 생성
 > > random_graph_analysis.create_config_graph()
 > >
-> > # Chung-Lu model을 이용한 그래프 생성
+> > # 3. Chung-Lu model을 이용한 그래프 생성
 > > random_graph_analysis.create_chunglu_graph()
 > >
-> > # BA model을 이용한 그래프 생성
+> > # 4. BA model을 이용한 그래프 생성
 > > random_graph_analysis.create_BA_graph()
+> > # default값 외에 초기 노드수 m0 또는 새로운 노드가 가지고 오는 미연결 링크수 m를 지정하고 싶은 경우
+> > random_graph_analysis.m0 = 6
+> > random_graph_analysis.m = 3
+> > random_graph_analysis.create_random_graph_ensemble(random_graph="BA", num_simulations=100)
 > > ```
 > 
 > > #### 2.2.2. 무작위 그래프 앙상블 생성 [▲](#what-is-it-for)
 > >
 > > 앙상블 그래프 생성 함수에 사용할 무작위 모델 이름과 앙상블 개수를 매개변수로 넘겨준다. 앙상블 그래프 리스트를 반환한다.
 > > ```python
-> > # ER model 앙상블 그래프 생성
+> > # 1. ER model 앙상블 그래프 생성
 > > random_graph_analysis.create_random_graph_ensemble(random_graph="ER", num_simulations=100)
 > > 
-> > # Configuration model 앙상블 그래프 생성
+> > # 2. Configuration model 앙상블 그래프 생성
 > > random_graph_analysis.create_random_graph_ensemble(random_graph="configuration", num_simulations=100)
 > > 
-> > # Chung-Lu model 앙상블 그래프 생성
+> > # 3. Chung-Lu model 앙상블 그래프 생성
 > > random_graph_analysis.create_random_graph_ensemble(random_graph="chunglu", num_simulations=100)
 > > 
-> > # BA model 앙상블 그래프 생성
+> > # 4. BA model 앙상블 그래프 생성
 > > random_graph_analysis.create_random_graph_ensemble(random_graph="BA", num_simulations=100)
 > > ```
 > 
