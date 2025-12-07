@@ -10,7 +10,7 @@
 ---
 ## 1. Random Network Models
 > ### What is it for?
-> 원본 네트워크의 특정한 특성들을 유지한 채 [무작위 네트워크를 생성](#221Create-Random-Graph)하여 원본 네트워크의 고유한 특성을 비교 분석할 수 있다.
+> 원본 네트워크의 특정한 특성들을 유지한 채 [무작위 네트워크를 생성](#221-Create-Random-Graph)하여 원본 네트워크의 고유한 특성을 비교 분석할 수 있다.
 >
 > 일반적으로 무작위성의 평균적 특성을 보기 위해 여러 개의 무작위 그래프(앙상블 그래프)를 생성한 후 평균값을 이용해 분석한다.
 
@@ -61,9 +61,9 @@ Random-Network-Analysis
 > > ```python
 > > from random_graph_pkg.random_graph_analysis import *
 > > ```
-> > 분석할 소스 코드에 위와 같이 패키지를 import 한 후 [패키지 함수들을 사용](#22Analysis)한다.
+> > 분석할 소스 코드에 위와 같이 패키지를 import 한 후 [패키지 함수들을 사용](#22-Analysis)한다.
 
-> ### 2.2. Analysis [▲](#How-to-Use)
+> ### 2.2. Analysis [▲](#21-How-to-Use)
 > `random_graph_pkg`를 이용해 할 수 있는 분석은 다음과 같다.
 >
 > > #### 2.2.1. Create Random Graph [▲](#What-is-it-for)
