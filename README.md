@@ -87,9 +87,8 @@ Random-Network-Analysis
 > > # 4. BA model을 이용한 그래프 생성
 > > random_graph_analysis.create_BA_graph()
 > > # default값 외에 초기 노드수 m0 또는 새로운 노드가 가지고 오는 미연결 링크수 m를 지정하고 싶은 경우
-> > random_graph_analysis.m0 = 6
-> > random_graph_analysis.m = 3
-> > random_graph_analysis.create_random_graph_ensemble(random_graph="BA", num_simulations=100)
+> > random_graph_analysis.m0 = 6;  random_graph_analysis.m = 3
+> > random_graph_analysis.create_BA_graph()
 > > ```
 > 
 > > #### 2.2.2. 무작위 그래프 앙상블 생성 [▲](#what-is-it-for)
