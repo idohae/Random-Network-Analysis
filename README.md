@@ -10,7 +10,7 @@
 ---
 ## 1. Random Network Models
 > ### What is it for?
-> 원본 네트워크의 특정한 특성들을 유지한 채 [무작위 네트워크를 생성](#1Create-Random-Graph)하여 원본 네트워크의 고유한 특성을 비교 분석할 수 있다.
+> 원본 네트워크의 특정한 특성들을 유지한 채 [무작위 네트워크를 생성](#221Create-Random-Graph)하여 원본 네트워크의 고유한 특성을 비교 분석할 수 있다.
 >
 > 일반적으로 무작위성의 평균적 특성을 보기 위해 여러 개의 무작위 그래프(앙상블 그래프)를 생성한 후 평균값을 이용해 분석한다.
 
@@ -48,7 +48,7 @@ Random-Network-Analysis
 ├── Analysis.ipynb
 └── README.md
 ```
-> ### How to Use?
+> ### 2.1. How to Use?
 > >       git clone https://github.com/idohae/Random-Network-Analysis.git
 > >
 > > 위 명령어를 명령창에 입력하여 무작위 네트워크 분석 패키지를 원하는 환경에 다운 받는다.
@@ -61,58 +61,58 @@ Random-Network-Analysis
 > > ```python
 > > from random_graph_pkg.random_graph_analysis import *
 > > ```
-> > 분석할 소스 코드에 위와 같이 패키지를 import 한 후 [패키지 함수들을 사용](#Analysis)한다.
+> > 분석할 소스 코드에 위와 같이 패키지를 import 한 후 [패키지 함수들을 사용](#22Analysis)한다.
 
-> ### Analysis [▲](#How-to-Use)
+> ### 2.2. Analysis [▲](#21How-to-Use)
 > `random_graph_pkg`를 이용해 할 수 있는 분석은 다음과 같다.
 >
-> 1. [Create Random Graph](#What-is-it-for)
->
-> 원하는 모델의 그래프 생성 함수를 호출하면 무작위 그래프를 반환한다.
-> ```python
-> random_graph_analysis = RandomGraphAnalysis(original_graph)
+> > #### 2.2.1. Create Random Graph [▲](#What-is-it-for)
+> >
+> > 원하는 모델의 그래프 생성 함수를 호출하면 무작위 그래프를 반환한다.
+> > ```python
+> > random_graph_analysis = RandomGraphAnalysis(original_graph)
+> > 
+> > # G(n,p)의 ER model을 이용한 그래프 생성
+> > random_graph_analysis.create_ERnp_graph()
+> > 
+> > # Configuration model을 이용한 그래프 생성
+> > random_graph_analysis.create_config_graph()
+> >
+> > # Chung-Lu model을 이용한 그래프 생성
+> > random_graph_analysis.create_chunglu_graph()
+> >
+> > # BA model을 이용한 그래프 생성
+> > random_graph_analysis.create_BA_graph()
+> > ```
 > 
-> # G(n,p)의 ER model을 이용한 그래프 생성
-> random_graph_analysis.create_ERnp_graph()
+> > #### 2.2.2. 무작위 그래프 앙상블 생성
+> >
+> > 앙상블 그래프 생성 함수에 사용할 무작위 모델 이름과 앙상블 개수를 매개변수로 넘겨준다. 앙상블 그래프 리스트를 반환한다.
+> > ```python
+> > # ER model 앙상블 그래프 생성
+> > random_graph_analysis.create_random_graph_ensemble(random_graph="ER", num_simulations=100)
+> > 
+> > # Configuration model 앙상블 그래프 생성
+> > random_graph_analysis.create_random_graph_ensemble(random_graph="configuration", num_simulations=100)
+> > 
+> > # Chung-Lu model 앙상블 그래프 생성
+> > random_graph_analysis.create_random_graph_ensemble(random_graph="chunglu", num_simulations=100)
+> > 
+> > # BA model 앙상블 그래프 생성
+> > random_graph_analysis.create_random_graph_ensemble(random_graph="BA", num_simulations=100)
+> > ```
 > 
-> # Configuration model을 이용한 그래프 생성
-> random_graph_analysis.create_config_graph()
->
-> # Chung-Lu model을 이용한 그래프 생성
-> random_graph_analysis.create_chunglu_graph()
->
-> # BA model을 이용한 그래프 생성
-> random_graph_analysis.create_BA_graph()
-> ```
+> > #### 2.2.3. 그래프의 차수 분포 계산
+> >
+> > 그래프를 인자로 주면 해당 그래프의 차수 분포 array를 반환한다. 그래프를 넘겨주지 않을 경우 객체를 생성할 때 사용한 원본 그래프의 차수 분포를 반환한다.
+> > ```python
+> > random_graph_analysis.degree_distribution(graph)
+> > ```
 > 
-> 2. 무작위 그래프 앙상블 생성
->
-> 앙상블 그래프 생성 함수에 사용할 무작위 모델 이름과 앙상블 개수를 매개변수로 넘겨준다. 앙상블 그래프 리스트를 반환한다.
-> ```python
-> # ER model 앙상블 그래프 생성
-> random_graph_analysis.create_random_graph_ensemble(random_graph="ER", num_simulations=100)
-> 
-> # Configuration model 앙상블 그래프 생성
-> random_graph_analysis.create_random_graph_ensemble(random_graph="configuration", num_simulations=100)
-> 
-> # Chung-Lu model 앙상블 그래프 생성
-> random_graph_analysis.create_random_graph_ensemble(random_graph="chunglu", num_simulations=100)
-> 
-> # BA model 앙상블 그래프 생성
-> random_graph_analysis.create_random_graph_ensemble(random_graph="BA", num_simulations=100)
-> ```
-> 
-> 3. 그래프의 차수 분포 계산
->
-> 그래프를 인자로 주면 해당 그래프의 차수 분포 array를 반환한다. 그래프를 넘겨주지 않을 경우 객체를 생성할 때 사용한 원본 그래프의 차수 분포를 반환한다.
-> ```python
-> random_graph_analysis.degree_distribution(graph)
-> ```
-> 
-> 4. 앙상블 그래프의 차수 분포 계산
->
-> 앙상블 그래프 리스트를 넘겨주면 차수 분포 array의 리스트를 반환한다.
-> ```python
-> random_graph_analysis.ensemble_degree_distributions(ensemble_graphs_list)
-> ```
+> > #### 2.2.4. 앙상블 그래프의 차수 분포 계산
+> >
+> > 앙상블 그래프 리스트를 넘겨주면 차수 분포 array의 리스트를 반환한다.
+> > ```python
+> > random_graph_analysis.ensemble_degree_distributions(ensemble_graphs_list)
+> > ```
 
