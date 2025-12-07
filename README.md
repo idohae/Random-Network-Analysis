@@ -54,6 +54,12 @@ Random-Network-Analysis
 > > ```python
 > > from random_graph_pkg.random_graph_analysis import *
 > > ```
-> > 분석할 소스 코드에 위와 같이 패키지를 import 한 후 패키지 함수들을 사용한다.
+> > 분석할 소스 코드에 위와 같이 패키지를 import 한 후 [패키지 함수들을 사용](#Analysis)한다.
 
+> ### [Analysis](#Analysis)
+> `random_graph_pkg`의 구성은 다음과 같다.
 > 
+> > 
+> ```python
+> class RandomGraphAnalysis
+> ```
