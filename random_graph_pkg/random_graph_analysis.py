@@ -227,7 +227,7 @@ class RandomGraphAnalysis():
 
   def create_BA_graph(self):
     '''
-    BA graph 생성 함수 (노드 특성은 유지되지 않음)
+    Barabási-Albert (BA) graph 생성 함수 (노드 특성은 유지되지 않음)
     '''
 
     G = nx.complete_graph(self.m0) # fully connected Graph w/ m0 nodes
