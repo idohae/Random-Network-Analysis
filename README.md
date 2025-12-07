@@ -57,7 +57,7 @@ Random-Network-Analysis
 > > `Analysis.ipynb` 파일을 실행한다.
 >
 > > #### 2) 패키지 이용하여 원하는 데이터 분석
-> > `random_graph_pkg` 디렉토리를 분석할 데이터 및 분석 코드와 같은 디렉토리 내에 위치시킨다.
+> > 패키지 디렉토리 `random_graph_pkg` 를 분석할 데이터 및 분석 코드와 같은 디렉토리 내에 위치시킨다.
 > > ```python
 > > from random_graph_pkg.random_graph_analysis import *
 > > ```
