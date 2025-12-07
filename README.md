@@ -1,4 +1,4 @@
-# Random Network Analysis
+# 🎲 Random Network Analysis 📈📊
 
 ## **⋆ . 🎁˚🎄 ✦Members.. 🧸⊹ ･✧**
 > 이해정(Haejeong, Lee) <pouwuoq0815@pukyong.ac.kr>
