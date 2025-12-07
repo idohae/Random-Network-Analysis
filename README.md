@@ -76,8 +76,13 @@ Random-Network-Analysis
 >
 > # Chung-Lu model을 이용한 그래프 생성
 > random_graph_analysis.create_chunglu_graph()
+>
+> # Barabási-Albert model을 이용한 그래프 생성
+> random_graph_analysis.create_BA_graph()
 > ```
 > 2. 무작위 네트워크 앙상블 생성
+> ```python
+> ```
 > 3. 네트워크의 차수 분포 계산
 > 4. 앙상블 네트워크의 차수 분포 계산
 > > 
