@@ -13,7 +13,7 @@
 > 원본 네트워크의 특정한 특성들을 유지한 채 무작위 네트워크를 생성하여 원본 네트워크의 고유한 특성을 비교 분석할 수 있다.
 
 > ### 1.1. Erdős–Rényi (ER) model
-> p의 확률로 노드 간 엣지를 연결하여 그래프를 생성하는 모델
+> $p$ 의 확률로 노드 간 엣지를 연결하여 그래프를 생성하는 모델
 > 
 > 패키지 내에서 default 값은 원본 네트워크의 엣지 밀도를 사용함.
 > 
@@ -26,6 +26,11 @@
 > 노드 $i$ 와 노드 $j$ 사이의 엣지를 각 노드의 차수에 따른 확률 $p_{ij}$로 연결하여 그래프를 생성하는 모델
 > 
 > $p_{ij} = \frac{k_ik_j}{\sum_i{k_i}}$
+
+> ### 1.4. Barabási-Albert (BA) model
+> 소수의 초기 노드로 구성된 네트워크에서 시작해, $m$ 개의 미연결 링크를 가진 새로운 노드를 하나씩 추가하며 존재하던 노드와 차수에 따른 확률 $p$ 로 링크를 연결하여 그래프를 생성하는 모델
+>
+> $p = \frac{k_i}{\sum_j{k_j}}$
 
 ---
 ## 2. Package
@@ -57,9 +62,23 @@ Random-Network-Analysis
 > > 분석할 소스 코드에 위와 같이 패키지를 import 한 후 [패키지 함수들을 사용](#Analysis)한다.
 
 > ### [Analysis](#Analysis)
-> `random_graph_pkg`의 구성은 다음과 같다.
-> 
-> > 
+> `random_graph_pkg`를 이용해 할 수 있는 분석은 다음과 같다.
+>
+> 1. 무작위 네트워크 생성
 > ```python
-> class RandomGraphAnalysis
+> random_graph_analysis = RandomGraphAnalysis(original_graph)
+> 
+> # G(n,p)의 Erdős–Rényi model을 이용한 그래프 생성
+> random_graph_analysis.create_ERnp_graph()
+> 
+> # Configuration model을 이용한 그래프 생성
+> random_graph_analysis.create_config_graph()
+>
+> # Chung-Lu model을 이용한 그래프 생성
+> random_graph_analysis.create_chunglu_graph()
 > ```
+> 2. 무작위 네트워크 앙상블 생성
+> 3. 네트워크의 차수 분포 계산
+> 4. 앙상블 네트워크의 차수 분포 계산
+> > 
+
